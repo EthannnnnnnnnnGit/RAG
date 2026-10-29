@@ -11,3 +11,7 @@ class UnansweredQuestion(BaseModel):
 class AnsweredQuestion(UnansweredQuestion):
     sources: list[MinimalSource]
     answer: str
+
+
+class RagDataset(BaseModel):
+    rag_questions: list[AnsweredQuestion | UnansweredQuestion]
