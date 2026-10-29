@@ -12,7 +12,7 @@ class Pipeline:
         self.evaluate()
 
     def index(self, max_chunk_size: int = 2000):
-        self.index = Indexing()
+        self.index = Indexing(max_chunk_size)
         max_chunk_size
 
     def search(self, k: int = 5):
